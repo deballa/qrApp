@@ -12,10 +12,10 @@ export class HomePage {
   scanner: any;
   content: HTMLElement;
 
-  resultado = '';
+  resultado = 'http';
 
   constructor(
-    private qrScanner: QRScanner, 
+    private qrScanner: QRScanner,
     public alertController: AlertController) {}
 
   lerQRCode(){
@@ -32,6 +32,7 @@ export class HomePage {
 
           this.resultado = text['result']; //Guarda a leitura na variável
 
+          this.testarURL();
           this.alertUrl();
 
           this.content.style.opacity = '1';
@@ -58,13 +59,15 @@ export class HomePage {
         message: this.resultado,
         buttons: ['Ok'],
       });
-  
+
       await alert.present();
     }
 
-    testeURL() {
+    testarURL() {
       const txt = this.resultado.substr(0, 3);
-      console.log(txt);
+      if (txt == 'htt' || txt == 'www'){
+        this.resultado = `<a href="${this.resultado}">${this.resultado}</a>`;
+      }
     }
 
 }
