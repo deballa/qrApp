@@ -1,0 +1,24 @@
+.leitor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+
+  .borda {
+    width: 60vw;
+    height: 60vw;
+    border: 4px dashed rgb(255, 26, 26);
+    padding: 15px;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      border-radius: 20px;
+    }
+  }
+}
