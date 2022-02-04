@@ -14,11 +14,13 @@ Para executar as aplicações é necessário realizar as seguintes instalações
 
 ## 🧭 Executando a aplicação mobile
 
-> $ ionic cordova platform rm browser
-> $ ionic cordova platform add browser 
-> $ npm i @angular-devkit/architect /*Se der erro no module*/
-> $ ionic cordova build browser
-> $ ionic cordova run browser
+```
+$ ionic cordova platform rm browser
+$ ionic cordova platform add browser 
+$ npm i @angular-devkit/architect /*Se der erro no module*/
+$ ionic cordova build browser
+$ ionic cordova run browser
+```
 
 ---
 
